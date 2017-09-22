@@ -1,7 +1,7 @@
 const restful  = require('node-restful')
 const mongoose = restful.mongoose
 
-//definindo schemas da tablea do mongoose
+//definindo schemas da tabela do mongoose
 
 const creditSchema = new mongoose.Schema({
   name:  { type:String,         required:true},
