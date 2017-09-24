@@ -3,7 +3,7 @@ const _            = require('lodash')
 
 BillingCycle.methods(['get','post','put','delete'])
 BillingCycle.updateOptions({new:true, runValidators:true}) // retorna o objeto novo e nao o que ja estava na base de dados antes da alteracao
-
+  //runValidators eh uma diretiva que forca para qualquer update de registros as validacoes de cada campo antes de ser atualizado tal registro
 BillingCycle.after('post',sendErrorOrNext).after('put',sendErrorOrNext)
 
 function sendErrorOrNext(req,res,next) { //funcao que valida que tipo de mensagem esta sendo enviado de volta depois do put ou post do noderestful
